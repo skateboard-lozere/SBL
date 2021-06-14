@@ -1,0 +1,42 @@
+body {
+    font-family: 'roboto', sans-serif;
+    line-height: 1.5rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, .h1 {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    text-shadow: 0px 0px 3px #777;
+    @media (max-width: 700px) {
+        margin-top: 50px;
+    }
+    @media (max-width: 500px) {
+        margin-top: 25px;
+    }
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 25px 0 25px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 25px 0 25px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+a:link ,a:visited, a:hover, a:focus, a:active {
+    color: #FFF;
+    transition: color 0.2s ease-in-out;
+}

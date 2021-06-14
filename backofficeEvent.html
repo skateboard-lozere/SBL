@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Skateboard Brotherhood Lozere</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skateboard Brotherhood Lozere" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- ---------------------
+        Il faudra repacer le robot en index et follow (par defaut) après une optimmisation du SEO
+    ---------------------- -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="bandeauBurger"></div>
+        <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+        <!-- checkbox => menuBurger les 3barres sont le label + before + after -->
+        <nav class="menus">
+            <ul>
+                <li> <a href="index.html#presentation">Présentation</a> </li>
+                <li> <a href="index.html#team">Team</a> </li>
+                <li> <a href="index.html#evenement">Evènement</a> </li>
+                <li> <a href="#">Photos/Video</a> </li>
+                <li> <a href="index.html#contact">Contact</a> </li>
+                <li> <a href="./connecte.html" id="dynamicLabel">Se connecter</a> </li>
+            </ul>
+        </nav>
+        <label for="nav-checkbox" class="nav-checkbox-label">
+            <span></span>
+        </label>
+
+        <div class="logo">
+            <!-- LOGO possition absolute -->
+            <img class="logo" src="images/logo/NEW_logo_ecusson_Blanc_fond_noir.jpg"
+                alt="Logo de l'association de skate Skateboard Brother Lozère">
+        </div>
+    </header>
+    <br>
+
+    <h1>Createur d'evenement</h1>
+    <div class="marges-lateral">
+        <form id="formEvent" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="form-event-title">Titre</label>
+                <input type="text" class="form-control" id="form-event-title" placeholder="titre" maxlength="50"
+                    required="">
+            </div>
+            <div class="form-group">
+                <label for="form-event-date">Date</label>
+                <input type="text" class="form-control" id="form-event-date" placeholder="Date au format xx/xx/xx"
+                    maxlength="50" required="">
+            </div>
+
+
+
+            <h3>carte d'événement</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class=" col-12 col-md-6">
+                        <label for="form-event-cardImg" class="mt-2">Selectionner l'image de la carte événement
+                            :</label> <br>
+                        <input type="file" accept="image/png, image/jpeg" id="form-event-cardImg" required="">
+                        <div class="form-group">
+                            <label for="form-event-description">Description de la carte</label>
+                            <textarea type="text" class="form-control" id="form-event-card-description"
+                                placeholder="Description de la carte" maxlength="500" required="" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/evenements/CaptureCardTuto.PNG" alt="Image d'exemple de card event"
+                            class="imageTutoEvent">
+                    </div>
+                </div>
+            </div>
+
+            <h3>Slider</h3>
+
+            <div class="form-group">
+                <label for="form-event-slider" class="mt-2">Selectionner les images du Slider : </label>
+                <input type="file" accept="image/png, image/jpeg" id="form-event-slider" required="" multiple>
+            </div>
+
+            <h3>Page événement</h3>
+
+            <!-- Text de l'événement -->
+            <div class="form-group">
+                <label for="form-event-text">text pour la page événement</label>
+                <textarea type="text" class="form-control" id="form-event-text"
+                    placeholder="Texte qui sera présent sur la page de l'événement associé" maxlength="2000" required=""
+                    rows="10"></textarea>
+            </div>
+
+            <!-- liste de video en rapport avec l'événement -->
+            <div class="form-group">
+                <label for="form-event-urlYoutube">URL YOUTUBE</label>
+                <textarea type="text" class="form-control" id="form-event-urlYoutube"
+                    placeholder="Insérer les URLs des videos de la chaine youtube sous la forme: URL,URL,URL   sans espaces "
+                    maxlength="500" required="" rows="3"></textarea>
+            </div>
+
+            <button type="submit" id="btnAddEvent" class="btn btn-outline-dark mb-4">Ajouter l'evenement</button>
+        </form>
+
+        <!-- =============================================== CAROUSEL POUR DELETE LES EVENTS ======================================================= -->
+        <div class="underline-title"></div>
+        <h2>Suppression d'evenements</h2>
+        <div class="container my-4">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-interval="false">
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox" id="carousel-inner">
+
+                    <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+
+        <div id="dynamiqueModifyForm"></div>
+    </div>
+
+
+    <footer>
+        <div class="reseaux-sociaux section">
+            <div class="reseaux-sociaux__carte"><i class="fab fa-facebook-square"></i><span>Facebook</span></div>
+
+            <div class="reseaux-sociaux__carte"><a href="https://www.instagram.com/skateboardbrotherhoodlozere/"
+                    class="reseaux-sociaux__carte--lien"><i
+                        class="fab fa-instagram-square"></i><span>Instagram</span></a>
+            </div>
+        </div>
+
+        <div class="flex-conteneur">
+            <div class="contact" id="contact">
+                <h4>Contact :</h4>
+                <ul>
+                    <li> @mail : <a href="mailto:skateboardbrotherhoodlozere@gmail.com"
+                            class="mailto">skateboardbrotherhoodlozere@gmail.com</a> </li>
+                    <li>Siège social : 8 Rue de la Liberté, Chez M Terrisson, 48000 Mende</li>
+                    <li>Pour tous problèmes d'accebilités ou autre rencontré sur le site, merci d'en référer à
+                        l'adresse: antoine.pertoldi@gmail.com </li>
+                </ul>
+            </div>
+            <div class="div-separator"></div>
+            <div class="partenaires">
+                <h4>Partenaires :</h4>
+                Des liens vers leur site internet pour augmenter nos référencements respectifs
+            </div>
+        </div>
+
+        <div class="bandeSombre">
+            <span class="copyright">© Copyright 2021 Pertoldi Antoine - </span> <a href="./mentionsLegales.html"
+                class="copyright__lien">Mentions légales</a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/6c9b3ad233.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="JS/backofficeEvent.js"></script>
+    <script src="JS/header.js"></script>
+</body>
+
+</html>

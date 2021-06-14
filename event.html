@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Skateboard Brotherhood Lozere</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Skateboard Brotherhood Lozere" />
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- ---------------------
+			Il faudra repacer le robot en index et follow (par defaut) après une optimmisation du SEO
+		---------------------- -->
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body>
+	<header>
+		<div class="bandeauBurger"></div>
+		<input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+		<!-- checkbox => menuBurger les 3barres sont le label + before + after -->
+		<nav class="menus">
+			<ul>
+				<li> <a href="index.html#presentation">Présentation</a> </li>
+				<li> <a href="index.html#team">Team</a> </li>
+				<li> <a href="index.html#evenement">Evènement</a> </li>
+				<li> <a href="#">Photos/Video</a> </li>
+				<li> <a href="index.html#contact">Contact</a> </li>
+				<li> <a href="./connecte.html" id="dynamicLabel">Se connecter</a> </li>
+			</ul>
+		</nav>
+		<label for="nav-checkbox" class="nav-checkbox-label">
+			<span></span>
+		</label>
+
+		<div class="logo">
+			<!-- LOGO possition absolute -->
+			<img class="logo" src="images/logo/NEW_logo_ecusson_Blanc_fond_noir.jpg"
+				alt="Logo de l'association de skate Skateboard Brother Lozère">
+		</div>
+	</header>
+
+	<div class="backgroundBlack" id="backgroundBlack"></div>
+
+	<!-- Slider d'images -->
+	<div class="container" id="ancreBackgroundBlack">
+		<div class="row mb-4">
+			<div class="col">
+				<div id="carouselControls" class="carousel slide" data-interval="false">
+					<div class="carousel-inner" id="carousel-inner">
+
+
+					</div>
+					<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev"
+						id="btn-carousel-prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Précédent</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next"
+						id="btn-carousel-next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Suivant</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="marges-lateral">
+
+		<h1 id="h1" class="mb-1"></h1>
+		<div id="date" class="date mb-4"></div>
+
+		<div id="textEvenement" class="textEvenement"></div>
+
+		<div class="underline-title"></div>
+
+		<div id="containerVideo" class="containerVideo"></div>
+	</div>
+
+</body>
+
+<footer>
+	<div class="reseaux-sociaux section">
+		<div class="reseaux-sociaux__carte"><i class="fab fa-facebook-square"></i><span>Facebook</span></div>
+
+		<div class="reseaux-sociaux__carte"><a href="https://www.instagram.com/skateboardbrotherhoodlozere/"
+				class="reseaux-sociaux__carte--lien"><i class="fab fa-instagram-square"></i><span>Instagram</span></a>
+		</div>
+	</div>
+
+	<div class="flex-conteneur">
+		<div class="contact" id="contact">
+			<h4>Contact :</h4>
+			<ul>
+				<li> @mail : <a href="mailto:skateboardbrotherhoodlozere@gmail.com"
+						class="mailto">skateboardbrotherhoodlozere@gmail.com</a> </li>
+				<li>Siège social : 8 Rue de la Liberté, Chez M Terrisson, 48000 Mende</li>
+				<li>Pour tous problèmes d'accebilités ou autre rencontré sur le site, merci d'en référer à l'adresse:
+					antoine.pertoldi@gmail.com </li>
+			</ul>
+		</div>
+		<div class="div-separator"></div>
+		<div class="partenaires">
+			<h4>Partenaires :</h4>
+			Des liens vers leur site internet pour augmenter nos référencements respectifs
+		</div>
+	</div>
+
+	<div class="bandeSombre">
+		<span class="copyright">© Copyright 2021 Pertoldi Antoine - </span> <a href="./mentionsLegales.html"
+			class="copyright__lien">Mentions légales</a>
+	</div>
+</footer>
+
+<script src="https://kit.fontawesome.com/6c9b3ad233.js" crossorigin="anonymous"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+	integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+	crossorigin="anonymous"></script>
+<script src="JS/header.js"></script>
+<script src="JS/event.js"></script>
