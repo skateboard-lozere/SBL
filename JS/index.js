@@ -80,7 +80,7 @@ async function addDomTeamCard(teamCard) {
 async function main() {
 	try {
 		//gestion des teamcards
-		dataTeams = await getResquest('http://127.0.0.1:3000/api/teamcard/');
+		dataTeams = await getResquest('https://skateboard-lozere.herokuapp.com/api/teamcard/');
 		await addDomTeamCard(dataTeams);
 	} catch (error) {
 		console.error(error);
