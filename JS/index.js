@@ -87,7 +87,7 @@ async function main() {
 	}
 	try {
 		//gestion des evenements
-		dataEvents = await getResquest('http://127.0.0.1:3000/api/event/');
+		dataEvents = await getResquest('https://skateboard-lozere.herokuapp.com/api/event/');
 		await addDomEnvent(dataEvents);
 	} catch (error) {
 		console.error(error);

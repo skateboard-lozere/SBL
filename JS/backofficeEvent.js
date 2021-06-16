@@ -179,7 +179,7 @@ async function addEventBtnSuppr(eventCard) {
         btnSuppr.addEventListener('click',async function(event) {
             if (confirm("Etes vous sur de vouloir supprimer cet evenement?")) {
                 let id = btnSuppr.getAttribute('name');
-                response = await deleteRequest(`http://127.0.0.1:3000/api/event/${id}`); 
+                response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`); 
             }
         });
     }
@@ -248,7 +248,7 @@ async function addModifyEvent(eventCard) {
             let id = btnModify.getAttribute("name"); 
 			event.preventDefault();
 			let bodyPut = prepareBodyPut();
-			putResponse = await putRequest(`http://127.0.0.1:3000/api/event/${id}`, bodyPut);
+			putResponse = await putRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`, bodyPut);
             window.location = 'backofficeEvent.html';
         });
         });
@@ -303,7 +303,7 @@ async function main() {
             try {
             // POST formulaire event
             let bodyRequest = prepareBodyPostEvent();
-            postResponse = await postRequestWithImg("http://127.0.0.1:3000/api/event/", bodyRequest);
+            postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/event/", bodyRequest);
             } catch (error) {
                 console.error(error);
             }
@@ -313,7 +313,7 @@ async function main() {
     try {
        //affichage des events dans le backofficeEvent avec un bouton de suppréssion et de modification
        //les EventListeners sont généré lord de la création des boutons
-       dataEvents = await getResquest('http://127.0.0.1:3000/api/event/');
+       dataEvents = await getResquest('https://skateboard-lozere.herokuapp.com/api/event/');
        await addDomEvent(dataEvents);
        await addEventBtnSuppr(dataEvents);
        await addModifyEvent(dataEvents);

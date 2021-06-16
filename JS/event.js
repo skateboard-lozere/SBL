@@ -90,7 +90,7 @@ async function createEventPage(event) {
 async function main() {
 	try {
 	let id = getUrlParamId();
-	datas = await getResquest(`http://127.0.0.1:3000/api/event/${id}`);
+	datas = await getResquest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`);
 	console.log(datas);
 	await createEventPage(datas);
 	

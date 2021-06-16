@@ -126,7 +126,7 @@ async function main() {
 			try{
 				let bodyRequest = await prepareBodyPostNewAccount();
 				console.log("Body request is", bodyRequest);
-				postResponse = await postRequest("http://127.0.0.1:3000/api/auth/signup", bodyRequest);
+				postResponse = await postRequest("https://skateboard-lozere.herokuapp.com/api/auth/signup", bodyRequest);
 				console.log("Reponse POST: " + postResponse);
 				alert('Votre compte à bien été créer !');
 			} catch (error) {
@@ -143,7 +143,7 @@ async function main() {
 		if(controlLogin()) {
 			try {
 			let bodyRequest = prepareBodyPostLogin();
-			postResponse = await postRequest("http://127.0.0.1:3000/api/auth/login", bodyRequest);
+			postResponse = await postRequest("https://skateboard-lozere.herokuapp.com/api/auth/login", bodyRequest);
 			localStorage.setItem('token', postResponse.token);
 			localStorage.setItem('userId', postResponse.userId);
 			window.location = '/frontend/index.html';

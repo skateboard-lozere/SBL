@@ -79,7 +79,7 @@ async function addEventBtnSuppr(teamCard) {
 		btnSuppr.addEventListener('click', async function (event) {
 			if (confirm("Etes vous sur de vouloir supprimer cette carte ?")) {
 				let id = btnSuppr.getAttribute('name');
-				response = await deleteRequest(`http://127.0.0.1:3000/api/teamcard/${id}`);
+				response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/teamcard/${id}`);
 			}
 		});
 	}
@@ -135,7 +135,7 @@ async function main() {
 				// POST formulaire team
 				let bodyRequest = prepareBodyPostTeam();
 				console.log(bodyRequest);
-				postResponse = await postRequestWithImg("http://127.0.0.1:3000/api/teamcard/", bodyRequest);
+				postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/teamcard/", bodyRequest);
 			} catch (error) {
 				console.error(error);
 			}
@@ -144,7 +144,7 @@ async function main() {
 
 	try {
 		//affichage des TeamCards + ajout bouton suppr et modifer
-		dataTeams = await getResquest('http://127.0.0.1:3000/api/teamcard/');
+		dataTeams = await getResquest('https://skateboard-lozere.herokuapp.com/api/teamcard/');
 		await addDomTeamCard(dataTeams);
 		await addEventBtnSuppr(dataTeams);
 	} catch (error) {
