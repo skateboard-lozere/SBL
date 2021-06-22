@@ -98,6 +98,36 @@ a:link, a:visited, a:hover, a:focus, a:active {
   margin-bottom: 35px;
 }
 
+.inscription-bandeau {
+  width: 100%;
+  background-image: linear-gradient(112.5deg, #c79525 0%, #c79525 2%, #ca8925 2%, #ca8925 10%, #cd7c25 10%, #cd7c25 38%, #d07025 38%, #d07025 64%, #d26424 64%, #d26424 66%, #d55724 66%, #d55724 78%, #d84b24 78%, #d84b24 100%), linear-gradient(157.5deg, #c79525 0%, #c79525 2%, #ca8925 2%, #ca8925 10%, #cd7c25 10%, #cd7c25 38%, #d07025 38%, #d07025 64%, #d26424 64%, #d26424 66%, #d55724 66%, #d55724 78%, #d84b24 78%, #d84b24 100%), linear-gradient(67.5deg, #c79525 0%, #c79525 2%, #ca8925 2%, #ca8925 10%, #cd7c25 10%, #cd7c25 38%, #d07025 38%, #d07025 64%, #d26424 64%, #d26424 66%, #d55724 66%, #d55724 78%, #d84b24 78%, #d84b24 100%), linear-gradient(90deg, #4130cf, #cacc79);
+  background-blend-mode: overlay,overlay,overlay,normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  padding: 50px 0 50px;
+  font-size: larger;
+  -webkit-box-shadow: 0 5px 10px #9b9b9b;
+          box-shadow: 0 5px 10px #9b9b9b;
+}
+
+.inscription-bandeau span {
+  color: white;
+  margin-bottom: 7px;
+}
+
+.inscription-bandeau a:hover {
+  color: yellow;
+}
+
 /* MENU BURGER -> checkbox */
 nav {
   -webkit-transform: scale(1, 0);

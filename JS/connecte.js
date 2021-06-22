@@ -146,7 +146,7 @@ async function main() {
 			postResponse = await postRequest("https://skateboard-lozere.herokuapp.com/api/auth/login", bodyRequest);
 			localStorage.setItem('token', postResponse.token);
 			localStorage.setItem('userId', postResponse.userId);
-			window.location = '/SBL/index.html';
+			window.location = './index.html';
 			} catch (error) {
 				console.error(error);
 			}

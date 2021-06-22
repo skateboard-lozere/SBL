@@ -55,7 +55,7 @@ class Obstacle {
     }
     update() {
         if (state.current == state.game) {
-            this.x = this.x - 4;
+            this.x = this.x - 3;
             //quand le skateur touche l'obstacle et qu'il n'a pas une frame de saut
             if (skateur.destinationX == this.x || skateur.destinationX == (this.x + 1)) {
                 console.log('OBSTACLE !');
@@ -170,7 +170,7 @@ const skateur = {
 
     update : function() {// fait l'animation
         if (this.Ijump == true) {
-            this.period = 4;
+            this.period = 6;
             if (state.current == state.game && frames%this.period == 0) {
                     this.frame += 1;                    
             }
