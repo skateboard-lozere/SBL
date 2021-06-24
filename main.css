@@ -561,6 +561,19 @@ footer .copyright__lien:hover {
   }
 }
 
+.presentation__content p {
+  margin: 25px 0;
+}
+
+.presentation__content--ul {
+  margin-bottom: 15px;
+  list-style-type: disc;
+}
+
+.presentation__content--li {
+  margin: 15px 0 15px 25px;
+}
+
 .presentation__content--text {
   width: 100%;
 }

@@ -7,6 +7,16 @@
         @media (min-width: 768px) {
             flex-direction: row;
         }
+        & p {
+            margin: 25px 0;
+        }
+        &--ul {
+            margin-bottom: 15px;
+            list-style-type: disc;
+        }
+        &--li {
+            margin: 15px 0 15px 25px;
+        }
         &--text {
             width: 100%;
             @media (min-width: 768px) {
