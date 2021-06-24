@@ -20,33 +20,40 @@
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="main.css" type="text/css" />
+
+	<script>
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+							if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
+				}
+			}
+		}
+	</script>
 </head>
 
 <body>
-	<header>
-		<div class="bandeauBurger"></div>
-		<input type="checkbox" id="nav-checkbox" class="nav-checkbox">
-		<!-- checkbox => menuBurger les 3barres sont le label + before + after -->
-		<nav class="menus">
-			<ul>
-				<li> <a href="index.html#presentation">Présentation</a> </li>
-				<li> <a href="index.html#team">Team</a> </li>
-				<li> <a href="index.html#evenement">Evènement</a> </li>
-				<li> <a href="#">Photos/Video</a> </li>
-				<li> <a href="index.html#contact">Contact</a> </li>
-				<li> <a href="./connecte.html" id="dynamicLabel">Se connecter</a> </li>
-			</ul>
-		</nav>
-		<label for="nav-checkbox" class="nav-checkbox-label">
-			<span></span>
-		</label>
-
-		<div class="logo">
-			<!-- LOGO possition absolute -->
-			<img class="logo" src="images/logo/NEW_logo_ecusson_Blanc_fond_noir.jpg"
-				alt="Logo de l'association de skate Skateboard Brother Lozère">
-		</div>
-	</header>
+	<div w3-include-html="./header.html"></div>
 
 	<div class="backgroundBlack" id="backgroundBlack"></div>
 
@@ -121,6 +128,9 @@
 	</div>
 </footer>
 
+<script>
+	includeHTML();
+</script>
 <script src="https://kit.fontawesome.com/6c9b3ad233.js" crossorigin="anonymous"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
