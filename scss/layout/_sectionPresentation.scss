@@ -3,13 +3,24 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
-        &--text{
-            width: 65%;
+        flex-direction: column-reverse;
+        @media (min-width: 768px) {
+            flex-direction: row;
         }
-        &--img{
-            width: 30%;
-            height: 250px;
+        &--text {
+            width: 100%;
+            @media (min-width: 768px) {
+                width: 65%;
+            }
+        }
+        &--img {
             background-color: coral;
+            width: 100%;
+            margin-bottom: 25px;
+            @media (min-width: 768px) {
+                width: 30%;
+                height: 250px;
+            }
         }
     }
 }
