@@ -556,7 +556,7 @@ footer .copyright__lien:hover {
           flex-direction: column-reverse;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .presentation__content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -580,24 +580,33 @@ footer .copyright__lien:hover {
 
 .presentation__content--text {
   width: 100%;
+  text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .presentation__content--text {
+    text-align: start;
     width: 65%;
   }
 }
 
 .presentation__content--img {
-  background-color: coral;
   width: 100%;
   margin-bottom: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .presentation__content--img {
     width: 30%;
-    height: 250px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .presentation__content--img {
+    height: 400px;
   }
 }
 
