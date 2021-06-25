@@ -2,10 +2,32 @@
 <html lang="fr">
 
 <head>
+	<!-- GOOGLE ANALYTICS -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RE9HEHCSNW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-RE9HEHCSNW');
+	</script>
+	<!-- END GOOGLE ANALYTICS  -->
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PXMWX9Z');</script>
+	<!-- End Google Tag Manager -->
 
 	<title>Skateboard Brotherhood Lozere</title>
 	<meta charset="utf-8" />
-	<meta name="description" content="Skateboard Brotherhood Lozere" />
+	<meta name="description"
+		content="L'association SKATEBOARD BROTHERHOOD Lozère a été créée en 2020 pour promouvoir et développer le skateboard à Mende et dans l'ensemble du département de la Lozère. Elle est née d'une volonté collective des pratiquants chevronnés du secteur de transmettre leur passion, de faire connaître ce sport encore peu développé sur le département et bien sûr de l'enseigner au plus jeunes, et offrir ainsi au public local une offre de pratique sportive innovante." />
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,11 +71,16 @@
 </head>
 
 <body>
-	<div w3-include-html="./header.html"></div>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXMWX9Z" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<header w3-include-html="./header.html"></header>
+
 	<div class="backgroundBlackCanvas" id="backgroundBlack"></div>
 
 	<canvas id="myCanvas" class="canvas-header" width="1200" height="250"></canvas>
-	
+
 	<a href="backofficeEvent.html">Goto BackOffice Event</a>
 	<a href="backofficeTeam.html">Goto BackOffice Team</a>
 
@@ -186,7 +213,7 @@
 
 	</div>
 
-	<div w3-include-html="./footer.html"></div>
+	<footer w3-include-html="./footer.html"></footer>
 
 	<script>
 		includeHTML();

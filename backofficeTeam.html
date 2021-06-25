@@ -2,16 +2,22 @@
 <html lang="fr">
 
 <head>
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE9HEHCSNW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RE9HEHCSNW');
+    </script>
+    <!-- END GOOGLE ANALYTICS  -->
     <title>Skateboard Brotherhood Lozere</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Skateboard Brotherhood Lozere" />
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ---------------------
-            Il faudra repacer le robot en index et follow (par defaut) après une optimmisation du SEO
-        ---------------------- -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -53,7 +59,7 @@
 </head>
 
 <body>
-    <div w3-include-html="./header.html"></div>
+    <header w3-include-html="./header.html"></header>
 
     <br>
 
@@ -113,39 +119,7 @@
 
     </div>
 
-    <footer>
-        <div class="reseaux-sociaux section">
-            <div class="reseaux-sociaux__carte"><i class="fab fa-facebook-square"></i><span>Facebook</span></div>
-
-            <div class="reseaux-sociaux__carte"><a href="https://www.instagram.com/skateboardbrotherhoodlozere/"
-                    class="reseaux-sociaux__carte--lien"><i
-                        class="fab fa-instagram-square"></i><span>Instagram</span></a>
-            </div>
-        </div>
-
-        <div class="flex-conteneur">
-            <div class="contact" id="contact">
-                <h4>Contact :</h4>
-                <ul>
-                    <li> @mail : <a href="mailto:skateboardbrotherhoodlozere@gmail.com"
-                            class="mailto">skateboardbrotherhoodlozere@gmail.com</a> </li>
-                    <li>Siège social : 8 Rue de la Liberté, Chez M Terrisson, 48000 Mende</li>
-                    <li>Pour tous problèmes d'accebilités ou autre rencontré sur le site, merci d'en référer à
-                        l'adresse: antoine.pertoldi@gmail.com </li>
-                </ul>
-            </div>
-            <div class="div-separator"></div>
-            <div class="partenaires">
-                <h4>Partenaires :</h4>
-                Des liens vers leur site internet pour augmenter nos référencements respectifs
-            </div>
-        </div>
-
-        <div class="bandeSombre">
-            <span class="copyright">© Copyright 2021 Pertoldi Antoine - </span> <a href="./mentionsLegales.html"
-                class="copyright__lien">Mentions légales</a>
-        </div>
-    </footer>
+    <footer w3-include-html="./footer.html"></footer>
 
     <script>
         includeHTML();

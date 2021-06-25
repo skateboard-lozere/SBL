@@ -2,6 +2,16 @@
 <html lang="fr">
 
 <head>
+	<!-- GOOGLE ANALYTICS -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RE9HEHCSNW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-RE9HEHCSNW');
+	</script>
+	<!-- END GOOGLE ANALYTICS  -->
 	<title>Skateboard Brotherhood Lozere</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +59,7 @@
 </head>
 
 <body>
-	<div w3-include-html="./header.html"></div>
+	<header w3-include-html="./header.html"></header>
 
 	<div class="marges-lateral">
 
@@ -87,7 +97,7 @@
 		</p>
 	</div>
 
-	<div w3-include-html="./footer.html"></div>
+	<footer w3-include-html="./footer.html"></footer>
 
 	<script>
 		includeHTML();
