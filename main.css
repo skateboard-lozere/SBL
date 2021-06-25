@@ -124,6 +124,10 @@ a:link, a:visited, a:hover, a:focus, a:active {
   margin-bottom: 7px;
 }
 
+.inscription-bandeau a {
+  color: black;
+}
+
 .inscription-bandeau a:hover {
   color: yellow;
 }
