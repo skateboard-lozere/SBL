@@ -4,7 +4,7 @@
         justify-content: space-around;
         flex-wrap: nowrap;
         flex-direction: column-reverse;
-        @media (min-width: 768px) {
+        @media (min-width: 1200px) {
             flex-direction: row;
         }
         & p {
@@ -19,17 +19,24 @@
         }
         &--text {
             width: 100%;
-            @media (min-width: 768px) {
-                width: 65%;
+            text-align: center;
+            @media (min-width: 1200px) {
+                text-align: start;
+                width: 55%;
             }
         }
+
         &--img {
-            background-color: coral;
+            &--container {
+                display: flex;
+                flex-direction: column;
+            }
             width: 100%;
             margin-bottom: 25px;
-            @media (min-width: 768px) {
-                width: 30%;
-                height: 250px;
+            object-fit: cover;
+            @media (min-width: 1200px) {
+                height: 400px;
+                margin-left: 25px;
             }
         }
     }
@@ -37,4 +44,17 @@
 
 .section {
     margin: 50px 0 25px 0;
+}
+
+.presentation-btn {
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.text-hidden {
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+    }
 }

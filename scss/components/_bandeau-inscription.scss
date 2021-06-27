@@ -9,10 +9,11 @@
 	font-size: larger;
 	box-shadow: 0 5px 10px rgb(155, 155, 155);
 	& span {
-		color: white;
+		color: black;
 		margin-bottom: 7px;
 	}
 	& a {
+		color: black;
 		&:hover {
 			color: yellow;
 		}
