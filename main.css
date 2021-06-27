@@ -123,6 +123,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
 .inscription-bandeau span {
   color: black;
   margin-bottom: 7px;
+  text-overflow: "";
 }
 
 .inscription-bandeau a {
