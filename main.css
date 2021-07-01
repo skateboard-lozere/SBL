@@ -615,6 +615,7 @@ footer a {
 
 @media (min-width: 1200px) {
   .presentation__content--img {
+    width: 40%;
     height: 400px;
     margin-left: 25px;
   }
