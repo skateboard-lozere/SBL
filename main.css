@@ -617,7 +617,7 @@ footer a {
 @media (min-width: 1200px) {
   .presentation__content--img {
     height: 400px;
-    margin-left: 25px;
+    padding-left: 25px;
   }
 }
 
