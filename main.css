@@ -597,7 +597,7 @@ footer a {
 }
 
 .presentation__content--img--container {
-  width: 40%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,6 +605,12 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .presentation__content--img--container {
+    width: 40%;
+  }
 }
 
 .presentation__content--img {
