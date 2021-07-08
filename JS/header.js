@@ -4,13 +4,17 @@ function main() {
     } else {
         console.log("la personne est identifiée !");
         const coDeco = document.getElementById("dynamicLabel");
-        coDeco.setAttribute("href", "./index.html");
-        coDeco.innerHTML = "Deconnexion";
-        coDeco.addEventListener('click', () => {
-            localStorage.removeItem('token');
-            localStorage.removeItem('userId');
-            alert('Vous etes deconnecter !');
-        });
+        if (coDeco == null) {
+            console.log('coDeco===null header.js ligne.8 !');
+        }else {
+            coDeco.setAttribute("href", "./index.html");
+            coDeco.innerHTML = "Deconnexion";
+            coDeco.addEventListener('click', () => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('userId');
+                alert('Vous etes deconnecter !');
+            });
+        }
     }
 }
 main();
