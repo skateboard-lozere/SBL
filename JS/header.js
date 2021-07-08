@@ -8,7 +8,7 @@ function main() {
             if (coDeco == null) {
                 console.log('coDeco===null header.js ligne.8 !');
             }else {
-                console.log('coDeco!=null header.js ligne.8 !');
+                console.log('coDeco VAUT SOMETING');
                 coDeco.setAttribute("href", "./index.html");
                 coDeco.innerHTML = "Deconnexion";
                 coDeco.addEventListener('click', () => {
@@ -19,6 +19,5 @@ function main() {
             }
         }
     });
-
 }
 main();

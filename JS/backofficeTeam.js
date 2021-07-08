@@ -80,6 +80,8 @@ async function addEventBtnSuppr(teamCard) {
 			if (confirm("Etes vous sur de vouloir supprimer cette carte ?")) {
 				let id = btnSuppr.getAttribute('name');
 				response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/teamcard/${id}`);
+				console.log('We delete a TeamCard');
+				document.location.href="https://www.skateboard-lozere.com/backofficeTeam.html"
 			}
 		});
 	}
