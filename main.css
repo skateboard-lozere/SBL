@@ -508,13 +508,7 @@ footer .contact li a {
 
 @media (max-width: 400px) {
   footer .contact li a {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 365px) {
-  footer .contact li a {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -537,6 +531,25 @@ footer .partenaires {
 
 footer .partenaires-liens {
   margin-bottom: 7px;
+}
+
+footer .partenaires ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+footer .partenaires ul li img {
+  width: 150px;
+  height: auto;
 }
 
 footer .bandeSombre {

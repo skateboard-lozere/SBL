@@ -56,10 +56,7 @@ footer {
                 color: #212529;
                 overflow: hidden;
                 @media (max-width: 400px) {
-                    font-size: 0.9rem;
-                }
-                @media (max-width: 365px) {
-                    font-size: 0.9rem;
+                    font-size: 0.95rem;
                 }
             }
         }
@@ -75,6 +72,19 @@ footer {
         }
         &-liens {
             margin-bottom: 7px;
+        }
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: auto;
+                margin-bottom: 15px;
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+            } 
         }
     }
 
