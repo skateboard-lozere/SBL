@@ -127,6 +127,19 @@ a:link, a:visited, a:hover, a:focus, a:active {
 
 .inscription-bandeau a {
   color: black;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .inscription-bandeau a {
+    width: 365px;
+  }
+}
+
+@media (max-width: 365px) {
+  .inscription-bandeau a {
+    width: 345px;
+  }
 }
 
 .inscription-bandeau a:hover {
@@ -490,6 +503,19 @@ footer .contact li {
 
 footer .contact li a {
   color: #212529;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  footer .contact li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 365px) {
+  footer .contact li a {
+    font-size: 0.9rem;
+  }
 }
 
 footer .partenaires {
