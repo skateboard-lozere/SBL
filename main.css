@@ -123,7 +123,6 @@ a:link, a:visited, a:hover, a:focus, a:active {
 .inscription-bandeau span {
   color: black;
   margin-bottom: 7px;
-  text-overflow: "";
 }
 
 .inscription-bandeau a {
@@ -495,12 +494,23 @@ footer .contact li a {
 
 footer .partenaires {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 768px) {
   footer .partenaires {
     width: 49%;
   }
+}
+
+footer .partenaires-liens {
+  margin-bottom: 7px;
 }
 
 footer .bandeSombre {
@@ -596,8 +606,14 @@ footer a {
   }
 }
 
-.presentation__content--img--container {
+.presentation__content--img {
   width: 100%;
+  margin-bottom: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation__content--img--container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,22 +624,9 @@ footer a {
 }
 
 @media (min-width: 1200px) {
-  .presentation__content--img--container {
-    width: 40%;
-  }
-}
-
-.presentation__content--img {
-  width: 100%;
-  margin-bottom: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media (min-width: 1200px) {
   .presentation__content--img {
     height: 400px;
-    padding-left: 25px;
+    margin-left: 25px;
   }
 }
 
@@ -798,6 +801,44 @@ footer a {
   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 }
 
+/* card text */
+.card--text {
+  position: absolute;
+  border: solid black 2px;
+  border-radius: 15px;
+  z-index: 99;
+  font-size: 0.9rem;
+  background-color: white;
+  padding: 5px;
+  margin-top: 15px;
+  display: none;
+  -webkit-transform: display ease 1.5s;
+          transform: display ease 1.5s;
+}
+
+.card--text::before {
+  position: absolute;
+  top: -14px;
+  left: 45px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid black;
+  border-left: 13px solid transparent;
+}
+
+.container-card:hover .card--text {
+  display: block;
+  left: -30px;
+  width: 240px;
+  height: auto;
+  top: 250px;
+  -webkit-transform: display ease 1.5s;
+          transform: display ease 1.5s;
+}
+
 .evenement-carte {
   border-radius: 25px;
   background-color: #c2c2c2;
@@ -902,6 +943,10 @@ footer a {
   .imageTutoEvent {
     width: auto;
   }
+}
+
+.form-team-text textarea {
+  width: 100%;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {

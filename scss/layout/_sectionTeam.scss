@@ -105,3 +105,40 @@
 	transform: translate(15px,15px);
 	transition: transform ease-out 200ms;
 }
+
+
+/* card text */
+
+.card--text {
+	position: absolute;
+	border: solid black 2px;
+	border-radius: 15px;
+	z-index: 99;
+	font-size: 0.9rem;
+	background-color: white;
+	padding: 5px;
+	margin-top: 15px;
+	display: none;
+	transform: display ease 1.5s;
+	&::before {
+		position: absolute;
+		top: -14px;
+		left: 45px;
+		content: "";
+		display : inline-block;
+		height : 0;
+		width : 0;
+		border-right : 13px solid transparent;
+		border-bottom : 13px solid black;
+		border-left : 13px solid transparent;
+	}
+}
+
+.container-card:hover .card--text {
+	display: block;
+	left: -30px;
+	width: 240px;
+	height: auto;
+	top: 250px;
+	transform: display ease 1.5s;
+}

@@ -24,7 +24,8 @@ function prepareBodyPostTeam() {
 		title: document.getElementById('form-team-title').value,
 		nom: document.getElementById('form-team-nom').value,
 		prenom: document.getElementById('form-team-prenom').value,
-		urlPortrait: document.getElementById('form-team-image').value
+		urlPortrait: document.getElementById('form-team-image').value,
+		presentationText: document.getElementById('form-team-text').value
 	};
 	formData.append('data', JSON.stringify(bodypost));
 	formData.append('image', document.getElementById('form-team-image').files[0]);
@@ -45,6 +46,12 @@ async function getResquest(url = '') {
 	}
 }
 
+
+/**
+ * 
+ * @param {*} teamCard 
+ * Ajoute Team CArd dans back office avec btn suppr
+ */
 async function addDomTeamCard(teamCard) {
 	const dynamicTeamCard = document.getElementById('dynamicTeamCard');
 	for (let i = 0; i < teamCard.length; i++) {
@@ -109,10 +116,14 @@ async function deleteRequest(url = '') {
 function ctrlInputTeamCard() {
 	const inputPrenom = document.getElementById('form-team-prenom').value;
 	const inputNom = document.getElementById('form-team-nom').value;
+	const inuptTextDescription = document.getElementById('form-team-text').value;
 	messageAlert = '';
 	let isOk = true;
-	let checkSpecialCaractere = /^[^@&"'`~^#{}<>_=\[\]()!:;,?./§$£€*\+]+[^0-9]+$/;
 
+	let checkSpecialCaractere = /^[^@&"'`~^#{}<>_=\[\]()!:;,?./§$£€*\+]+[^0-9]+$/;
+	let textControl = /^[^@&~^#{}<>_\[\]()/§$£*\+]+$/
+
+	
 	if (!checkSpecialCaractere.test(inputPrenom)) {
 		messageAlert = "Champs prenom invalide \n";
 		isOk = false;
@@ -120,6 +131,23 @@ function ctrlInputTeamCard() {
 	if (!checkSpecialCaractere.test(inputNom)) {
 		messageAlert += "Champs nom invalide \n";
 		isOk = false;
+	}
+	// Ctrl du text en acceptant les balises <br>
+	if (inuptTextDescription != undefined) {
+		let CtrlTextSplit = inuptTextDescription.split('<br>');
+		if (CtrlTextSplit[CtrlTextSplit.length] == "") {
+			CtrlTextSplit.splice(CtrlTextSplit.length-1, 1)
+			console.log('CtrlTextSplit is :', CtrlTextSplit)
+		}
+		for (i of CtrlTextSplit) {
+			console.log('i is :', i)
+			if (!textControl.test(i)) {
+				console.log('i n est pas passé is :', i)
+				messageAlert += "Champs text description invalide \n";
+				isOk = false;
+			}
+		}
+
 	}
 	if (!isOk) alert(messageAlert);
 
@@ -138,6 +166,7 @@ async function main() {
 				let bodyRequest = prepareBodyPostTeam();
 				console.log(bodyRequest);
 				postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/teamcard/", bodyRequest);
+				document.location.href="./backofficeTeam.html";
 			} catch (error) {
 				console.error(error);
 			}

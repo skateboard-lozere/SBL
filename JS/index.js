@@ -1,15 +1,15 @@
 //FUNCTION GET
 async function getResquest(url) {
-    let response = await fetch(url);
+	let response = await fetch(url);
 
-    if (response.ok) { // if HTTP-status is 200-299
-        // get the response body
-        let json = await response.json();
-        return json;
-    } else {
-        let message = await response.text();
-        throw new Error("une erreur est survenu" + message);
-    }
+	if (response.ok) { // if HTTP-status is 200-299
+		// get the response body
+		let json = await response.json();
+		return json;
+	} else {
+		let message = await response.text();
+		throw new Error("une erreur est survenu" + message);
+	}
 }
 //FUNCTION qui ajoute les cards events au Dom
 async function addDomEnvent(eventCard) {
@@ -20,18 +20,18 @@ async function addDomEnvent(eventCard) {
 			carouselItem.classList.add("carousel-item");
 			carouselItem.classList.add("active");
 			var row = document.createElement("div");
-	 		row.classList.add("row");
+			row.classList.add("row");
 		} else if (i % 3 === 0) {
 			carouselItem.appendChild(row);
 			carousel.appendChild(carouselItem);
 			var row = document.createElement("div");
-	 		row.classList.add("row");
+			row.classList.add("row");
 			var carouselItem = document.createElement("div");
 			carouselItem.classList.add("carousel-item");
 		}
-	const div = document.createElement("div");
-	div.classList.add("col-md-4");
-	div.innerHTML =`
+		const div = document.createElement("div");
+		div.classList.add("col-md-4");
+		div.innerHTML = `
 	  <div class="card mb-2">
 		<img class="card-img-top" src="${eventCard[i].imageCardUrl}"
 			 alt="Card image cap">
@@ -41,7 +41,7 @@ async function addDomEnvent(eventCard) {
 		  <a class="btn btn-dark mt-3"" href="event.html?idEvent=${eventCard[i]._id}">Voir</a>
 		</div>
 	  </div>`;
-	  row.appendChild(div);
+		row.appendChild(div);
 
 		if (i === eventCard.length - 1) {
 			carouselItem.appendChild(row);
@@ -55,7 +55,23 @@ async function addDomTeamCard(teamCard) {
 	for (let i = 0; i < teamCard.length; i++) {
 		const portrait = document.createElement('div');
 		portrait.classList.add('portrait');
-		portrait.innerHTML = `
+		if (teamCard[i].presentationText == undefined) {
+			portrait.innerHTML = `
+			<div class="container-card">
+				<div class="card">
+					<div class="card-img" id="card-img${i}"></div>
+					<div class="bloc-content-show">
+						<h2 class="text-light">${teamCard[i].nom}</h2>
+						<h2 class="text-light">${teamCard[i].prenom}</h2>
+						<p class="text-light text-right">${teamCard[i].title}</p>
+					</div>
+				</div>
+				<div class="bloc-focus-top"></div>
+				<div class="bloc-focus-bottom"></div>
+			</div>
+			`;
+		} else {
+			portrait.innerHTML = `
 		<div class="container-card">
 			<div class="card">
 				<div class="card-img" id="card-img${i}"></div>
@@ -65,11 +81,12 @@ async function addDomTeamCard(teamCard) {
 					<p class="text-light text-right">${teamCard[i].title}</p>
 				</div>
 			</div>
-
+			<p class="card--text">${teamCard[i].presentationText}</p>
 			<div class="bloc-focus-top"></div>
 			<div class="bloc-focus-bottom"></div>
 		</div>
 		`;
+		}
 		dynamicTeamCard.appendChild(portrait);
 		const cardImg = document.getElementById(`card-img${i}`);
 		cardImg.style.backgroundImage = `url(${teamCard[i].urlPortrait})`;

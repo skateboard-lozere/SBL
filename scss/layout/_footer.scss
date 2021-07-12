@@ -61,8 +61,13 @@ footer {
 
     .partenaires {
         width: 100%;
+        display: flex;
+        flex-direction: column;
         @media (min-width: 768px) {
             width: 49%;
+        }
+        &-liens {
+            margin-bottom: 7px;
         }
     }
 
