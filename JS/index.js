@@ -55,7 +55,7 @@ async function addDomTeamCard(teamCard) {
 	for (let i = 0; i < teamCard.length; i++) {
 		const portrait = document.createElement('div');
 		portrait.classList.add('portrait');
-		if (teamCard[i].presentationText == undefined) {
+		if (teamCard[i].presentationText == "undefined") {
 			portrait.innerHTML = `
 			<div class="container-card">
 				<div class="card">
