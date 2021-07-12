@@ -804,7 +804,7 @@ footer a {
 /* card text */
 .card--text {
   position: absolute;
-  border: solid black 2px;
+  border: solid #444444 2px;
   border-radius: 15px;
   z-index: 99;
   font-size: 0.9rem;
@@ -825,7 +825,7 @@ footer a {
   height: 0;
   width: 0;
   border-right: 13px solid transparent;
-  border-bottom: 13px solid black;
+  border-bottom: 13px solid #444444;
   border-left: 13px solid transparent;
 }
 

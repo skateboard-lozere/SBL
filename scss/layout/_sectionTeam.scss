@@ -111,7 +111,7 @@
 
 .card--text {
 	position: absolute;
-	border: solid black 2px;
+	border: solid rgb(68, 68, 68) 2px;
 	border-radius: 15px;
 	z-index: 99;
 	font-size: 0.9rem;
@@ -129,7 +129,7 @@
 		height : 0;
 		width : 0;
 		border-right : 13px solid transparent;
-		border-bottom : 13px solid black;
+		border-bottom : 13px solid rgb(68, 68, 68);
 		border-left : 13px solid transparent;
 	}
 }
