@@ -121,7 +121,7 @@ function ctrlInputTeamCard() {
 	let isOk = true;
 
 	let checkSpecialCaractere = /^[^@&"'`~^#{}<>_=\[\]()!:;,?./§$£€*\+]+[^0-9]+$/;
-	let textControl = /^[^@&~^#{}<>_\[\]()/§$£*\+]+$/
+	let textControl = /^[^@&~^#{}<>_\[\]/§$£*\+]+$/
 
 	
 	if (!checkSpecialCaractere.test(inputPrenom)) {
