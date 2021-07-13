@@ -493,12 +493,8 @@ footer .contact {
   }
 }
 
-footer .contact h4 {
-  margin-bottom: 10px;
-}
-
 footer .contact li {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 footer .contact li a {
@@ -569,7 +565,7 @@ footer .bandeSombre {
 
 footer .div-separator {
   width: 100%;
-  height: 1px;
+  height: 200px;
   background-color: #000;
   margin-bottom: 10px;
 }
@@ -922,6 +918,11 @@ footer a {
 
 .evenement-carte__content--txt {
   margin-right: 20px;
+}
+
+.card-img-top {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 .vitrine {

@@ -28,3 +28,7 @@
         }
     }
 }
+
+.card-img-top {
+    object-fit: cover !important; //car on change to object fit constain dans la page event
+}
