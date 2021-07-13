@@ -8,11 +8,12 @@
 .textEvenement {
 	text-align: center;
 }
-
-.carousel-item {
-	img {
-		max-height: 600px;
-		object-fit: contain;
+.carousel-inner {
+	.carousel-item {
+		img {
+			max-height: 600px;
+			object-fit: contain;
+		}
 	}
 }
 
