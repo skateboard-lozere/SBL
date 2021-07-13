@@ -179,7 +179,8 @@ async function addEventBtnSuppr(eventCard) {
         btnSuppr.addEventListener('click',async function(event) {
             if (confirm("Etes vous sur de vouloir supprimer cet evenement?")) {
                 let id = btnSuppr.getAttribute('name');
-                response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`); 
+                response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`);
+                document.location.href="./backofficeEvent.html";
             }
         });
     }
@@ -249,7 +250,7 @@ async function addModifyEvent(eventCard) {
 			event.preventDefault();
 			let bodyPut = prepareBodyPut();
 			putResponse = await putRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`, bodyPut);
-            window.location = 'backofficeEvent.html';
+            document.location.href="./backofficeEvent.html";
         });
         });
     }
@@ -285,10 +286,10 @@ function controlEvent() {
 		messageAlert += "Champs texte invalide \n";
 		isOk = false;
 	}
-    if (!checkUrlYoutube.test(listeUrlYoutube)) {
-        messageAlert += "Champs URL Youtube invalide";
-        isOk = false;
-    }
+    // if (!checkUrlYoutube.test(listeUrlYoutube)) {
+    //     messageAlert += "Champs URL Youtube invalide";
+    //     isOk = false;
+    // }
     if (!isOk) alert(messageAlert);
 
     return isOk;
@@ -304,6 +305,7 @@ async function main() {
             // POST formulaire event
             let bodyRequest = prepareBodyPostEvent();
             postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/event/", bodyRequest);
+            document.location.href="./backofficeEvent.html";
             } catch (error) {
                 console.error(error);
             }
