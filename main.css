@@ -969,9 +969,8 @@ footer a {
   text-align: center;
 }
 
-.carousel-inner img {
+.carousel-item img {
   max-height: 600px;
-  width: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
