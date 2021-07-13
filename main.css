@@ -565,13 +565,14 @@ footer .bandeSombre {
 
 footer .div-separator {
   width: 100%;
-  height: 390px;
+  height: 380px;
   background-color: #000;
   margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
   footer .div-separator {
+    height: 1px;
     width: 1px;
   }
 }
