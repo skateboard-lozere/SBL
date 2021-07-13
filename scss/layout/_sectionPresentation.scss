@@ -23,6 +23,7 @@
             @media (min-width: 1200px) {
                 text-align: start;
                 width: 55%;
+                min-width: 55%;
             }
         }
 
@@ -36,7 +37,7 @@
             object-fit: cover;
             @media (min-width: 1200px) {
                 height: 400px;
-                margin-left: 25px;
+                padding-left: 25px;
             }
         }
     }
