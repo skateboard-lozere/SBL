@@ -95,7 +95,11 @@ async function main() {
 	await createEventPage(datas);
 	
 	//gestion du fond noir derriere le slider
-	DynamicGestionSliderBackground();
+	$(document).ready(function(){
+		// your code
+		DynamicGestionSliderBackground();
+		});
+		
 	setTimeout(() => {sliderBackground();}, 200);
 	} catch (error) {
 		console.error(error);
