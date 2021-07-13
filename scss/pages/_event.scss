@@ -1,6 +1,5 @@
 .backgroundBlackEvent {
 	position: absolute;
-	height: 600px;
 	background-image: radial-gradient(
 			circle at 11% 37%,
 			hsla(251, 0%, 28%, 0.05) 0%,
@@ -83,7 +82,8 @@
 			transparent 100%
 		),
 		linear-gradient(0deg, hsl(167, 0%, 6%), hsl(167, 0%, 6%));
-	z-index: 0;
+	height: 600px;
+	z-index: -99;
 	width: 100%;
 }
 
