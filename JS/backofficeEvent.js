@@ -134,25 +134,25 @@ function prepareBodyPut() {
  * @return {HTMLElement} The carousel of events
  */
 async function addDomEvent(eventCard) {
-	const carousel = document.getElementById('carousel-inner');
-	for (let i = 0; i < eventCard.length; i++) {
-		if (i == 0) {
-			var carouselItem = document.createElement("div");
-			carouselItem.classList.add("carousel-item");
-			carouselItem.classList.add("active");
-			var row = document.createElement("div");
-	 		row.classList.add("row");
-		} else if (i % 3 === 0) {
-			carouselItem.appendChild(row);
-			carousel.appendChild(carouselItem);
-			var row = document.createElement("div");
-	 		row.classList.add("row");
-			var carouselItem = document.createElement("div");
-			carouselItem.classList.add("carousel-item");
-		}
+    const carousel = document.getElementById('carousel-inner');
+    for (let i = 0; i < eventCard.length; i++) {
+        if (i == 0) {
+            var carouselItem = document.createElement("div");
+            carouselItem.classList.add("carousel-item");
+            carouselItem.classList.add("active");
+            var row = document.createElement("div");
+            row.classList.add("row");
+        } else if (i % 3 === 0) {
+            carouselItem.appendChild(row);
+            carousel.appendChild(carouselItem);
+            var row = document.createElement("div");
+            row.classList.add("row");
+            var carouselItem = document.createElement("div");
+            carouselItem.classList.add("carousel-item");
+        }
         const div = document.createElement("div");
         div.classList.add("col-md-4");
-        div.innerHTML =`
+        div.innerHTML = `
             <div class="card mb-2">
                 <img class="card-img-top" src="${eventCard[i].imageCardUrl}"
                 alt="Card image cap">
@@ -163,24 +163,24 @@ async function addDomEvent(eventCard) {
                     <a class="btn btn-success mt-3" name="${eventCard[i]._id}" id="btnModify${i}">Modifier</a>
                 </div>
             </div>`
-            row.appendChild(div);
+        row.appendChild(div);
 
-		if (i === eventCard.length - 1) {
-			carouselItem.appendChild(row);
-			carousel.appendChild(carouselItem);
-		}
-	}
+        if (i === eventCard.length - 1) {
+            carouselItem.appendChild(row);
+            carousel.appendChild(carouselItem);
+        }
+    }
 }
 
 //FUCNTION ADDEVENTLISTENER AUX BOUTONS SUPPRIMER DES EVENTS
 async function addEventBtnSuppr(eventCard) {
     for (let i = 0; i < eventCard.length; i++) {
         let btnSuppr = document.getElementById(`btnSuppr${i}`);
-        btnSuppr.addEventListener('click',async function(event) {
+        btnSuppr.addEventListener('click', async function (event) {
             if (confirm("Etes vous sur de vouloir supprimer cet evenement?")) {
                 let id = btnSuppr.getAttribute('name');
                 response = await deleteRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`);
-                document.location.href="./backofficeEvent.html";
+                document.location.href = "./backofficeEvent.html";
             }
         });
     }
@@ -190,7 +190,7 @@ async function addEventBtnSuppr(eventCard) {
 async function addModifyEvent(eventCard) {
     for (let i = 0; i < eventCard.length; i++) {
         let btnModify = document.getElementById(`btnModify${i}`);
-        btnModify.addEventListener('click',async function(event) {
+        btnModify.addEventListener('click', async function (event) {
             //création du nouveau formulaire avec les valeurs de la cartes à changer
             const mainContainer = document.getElementById('dynamiqueModifyForm');
             mainContainer.innerHTML = `
@@ -243,15 +243,15 @@ async function addModifyEvent(eventCard) {
             <button type="submit" id="btnModifyEvent" class="btn btn-outline-dark mb-4">Modifier l'evenement</button>
         </form>
         `;
-        const btnModifyEvent = document.getElementById('btnModifyEvent');
-        btnModifyEvent.addEventListener('click', async function(event) {
-			console.log("bouton modifyEvent cliqué");
-            let id = btnModify.getAttribute("name"); 
-			event.preventDefault();
-			let bodyPut = prepareBodyPut();
-			putResponse = await putRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`, bodyPut);
-            document.location.href="./backofficeEvent.html";
-        });
+            const btnModifyEvent = document.getElementById('btnModifyEvent');
+            btnModifyEvent.addEventListener('click', async function (event) {
+                console.log("bouton modifyEvent cliqué");
+                let id = btnModify.getAttribute("name");
+                event.preventDefault();
+                let bodyPut = prepareBodyPut();
+                putResponse = await putRequest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`, bodyPut);
+                document.location.href = "./backofficeEvent.html";
+            });
         });
     }
 }
@@ -268,28 +268,30 @@ function controlEvent() {
     let checkSpecialCaractere = /^[^@&"'`~^#{}<>_=\[\]()!:;,?./§$£€*\+]+$/;
     let checkTexte = /^[^{}<>=$]+$/;
     let checkDate = /^[0-9]{2}\/[0-9]{2}\/[0-9]{2}$/;
-    let checkUrlYoutube = /^[^@&"'`~^#{}<>\[\]()!;§$£€*\+]+$/;
+    // let checkUrlYoutube = /^[^@&"'`~^#{}<>\[\]()!;§$£€*\+]+$/;
 
     if (!checkSpecialCaractere.test(inputTitle)) {
-		messageAlert = "Champs titre invalide \n";
-		isOk = false;
-	}
+        messageAlert = "Champs titre invalide \n";
+        isOk = false;
+    }
     if (!checkDate.test(inputDate)) {
-		messageAlert += "Champs date invalide \n";
-		isOk = false;
-	}
+        messageAlert += "Champs date invalide \n";
+        isOk = false;
+    }
     if (!checkTexte.test(inputDescription)) {
-		messageAlert += "Champs description-carte invalide \n";
-		isOk = false;
-	}
+        messageAlert += "Champs description-carte invalide \n";
+        isOk = false;
+    }
     if (!checkTexte.test(inputTxt)) {
-		messageAlert += "Champs texte invalide \n";
-		isOk = false;
-	}
-    // if (!checkUrlYoutube.test(listeUrlYoutube)) {
-    //     messageAlert += "Champs URL Youtube invalide";
-    //     isOk = false;
-    // }
+        messageAlert += "Champs texte invalide \n";
+        isOk = false;
+    }
+    if (listeUrlYoutube) {
+        if (!checkUrlYoutube.test(listeUrlYoutube)) {
+            messageAlert += "Champs URL Youtube invalide";
+            isOk = false;
+        }
+    }
     if (!isOk) alert(messageAlert);
 
     return isOk;
@@ -297,15 +299,15 @@ function controlEvent() {
 
 async function main() {
     const btnAddEvent = document.getElementById("btnAddEvent");
-    btnAddEvent.addEventListener('click', async function(event) {
+    btnAddEvent.addEventListener('click', async function (event) {
         console.log("bouton cliqué");
         event.preventDefault();
-        if(controlEvent()) {
+        if (controlEvent()) {
             try {
-            // POST formulaire event
-            let bodyRequest = prepareBodyPostEvent();
-            postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/event/", bodyRequest);
-            document.location.href="./backofficeEvent.html";
+                // POST formulaire event
+                let bodyRequest = prepareBodyPostEvent();
+                postResponse = await postRequestWithImg("https://skateboard-lozere.herokuapp.com/api/event/", bodyRequest);
+                document.location.href = "./backofficeEvent.html";
             } catch (error) {
                 console.error(error);
             }
@@ -313,14 +315,14 @@ async function main() {
     });
 
     try {
-       //affichage des events dans le backofficeEvent avec un bouton de suppréssion et de modification
-       //les EventListeners sont généré lord de la création des boutons
-       dataEvents = await getResquest('https://skateboard-lozere.herokuapp.com/api/event/');
-       await addDomEvent(dataEvents);
-       await addEventBtnSuppr(dataEvents);
-       await addModifyEvent(dataEvents);
+        //affichage des events dans le backofficeEvent avec un bouton de suppréssion et de modification
+        //les EventListeners sont généré lord de la création des boutons
+        dataEvents = await getResquest('https://skateboard-lozere.herokuapp.com/api/event/');
+        await addDomEvent(dataEvents);
+        await addEventBtnSuppr(dataEvents);
+        await addModifyEvent(dataEvents);
     } catch (error) {
-       console.error(error);
+        console.error(error);
     }
 }
 main();
