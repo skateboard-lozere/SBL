@@ -93,13 +93,6 @@ async function main() {
 	datas = await getResquest(`https://skateboard-lozere.herokuapp.com/api/event/${id}`);
 	console.log(datas);
 	await createEventPage(datas);
-	
-	//gestion du fond noir derriere le slider
-	$(document).ready(function(){
-		// your code
-		DynamicGestionSliderBackground();
-		});
-		
 	setTimeout(() => {sliderBackground();}, 200);
 	} catch (error) {
 		console.error(error);

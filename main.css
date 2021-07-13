@@ -974,6 +974,10 @@ footer a {
      object-fit: contain;
 }
 
+.backgroundBlack-event {
+  height: 600px;
+}
+
 .event-container {
   display: -webkit-box;
   display: -ms-flexbox;
