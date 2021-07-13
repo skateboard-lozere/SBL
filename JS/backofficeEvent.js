@@ -286,7 +286,7 @@ function controlEvent() {
         messageAlert += "Champs texte invalide \n";
         isOk = false;
     }
-    if (listeUrlYoutube) {
+    if (listeUrlYoutube != undefined) {
         if (!checkUrlYoutube.test(listeUrlYoutube)) {
             messageAlert += "Champs URL Youtube invalide";
             isOk = false;
