@@ -992,6 +992,7 @@ footer a {
 
 .event-container .textEvenement {
   max-width: 800px;
+  text-align: center;
 }
 
 .event-container .date {
