@@ -78,7 +78,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  margin: 25px 0 25px;
+  margin: 15px 0 15px;
 }
 
 h4 {
@@ -540,11 +540,11 @@ footer .partenaires ul li {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 footer .partenaires ul li img {
-  width: 150px;
+  width: 110px;
   height: auto;
 }
 
@@ -572,7 +572,7 @@ footer .div-separator {
 
 @media (min-width: 768px) {
   footer .div-separator {
-    height: 380px;
+    height: 255px;
     width: 1px;
   }
 }
