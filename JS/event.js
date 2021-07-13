@@ -17,12 +17,12 @@ function getUrlParamId() {
 	let param = currentURL.split('=')[1];
 	return param;
 }
-//génération du fond noir sous le slider
-function sliderBackground() {
-	const heightBackgroundBack = document.getElementById('ancreBackgroundBlack').scrollHeight;
-	const backgroundBlack = document.getElementById('backgroundBlack');
-	backgroundBlack.style.height = `${heightBackgroundBack}px`;
-}
+// //génération du fond noir sous le slider
+// function sliderBackground() {
+// 	const heightBackgroundBack = document.getElementById('ancreBackgroundBlack').scrollHeight;
+// 	const backgroundBlack = document.getElementById('backgroundBlack');
+// 	backgroundBlack.style.height = `${heightBackgroundBack}px`;
+// }
 
 function DynamicGestionSliderBackground() {
 	btnPrev = document.getElementById('btn-carousel-prev');
