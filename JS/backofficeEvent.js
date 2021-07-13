@@ -268,7 +268,7 @@ function controlEvent() {
     let checkSpecialCaractere = /^[^@&"'`~^#{}<>_=\[\]()!:;,?./§$£€*\+]+$/;
     let checkTexte = /^[^{}<>=$]+$/;
     let checkDate = /^[0-9]{2}\/[0-9]{2}\/[0-9]{2}$/;
-    // let checkUrlYoutube = /^[^@&"'`~^#{}<>\[\]()!;§$£€*\+]+$/;
+    let checkUrlYoutube = /^[^@&"'`~^#{}<>\[\]()!;§$£€*\+]+$/;
 
     if (!checkSpecialCaractere.test(inputTitle)) {
         messageAlert = "Champs titre invalide \n";
