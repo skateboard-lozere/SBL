@@ -17,24 +17,6 @@ function getUrlParamId() {
 	let param = currentURL.split('=')[1];
 	return param;
 }
-// //génération du fond noir sous le slider
-// function sliderBackground() {
-// 	const heightBackgroundBack = document.getElementById('ancreBackgroundBlack').scrollHeight;
-// 	const backgroundBlack = document.getElementById('backgroundBlack');
-// 	backgroundBlack.style.height = `${heightBackgroundBack}px`;
-// }
-
-function DynamicGestionSliderBackground() {
-	btnPrev = document.getElementById('btn-carousel-prev');
-	btNext = document.getElementById('btn-carousel-next');
-	btnPrev.addEventListener('click', () => {
-		setTimeout(() => {sliderBackground();},650);
-	});
-	btNext.addEventListener('click', () => {
-		setTimeout(() => {sliderBackground();},650);
-	});
-	window.onresize = sliderBackground;
-}
 
 async function createEventPage(event) {
 	// generation du slider avec les images event.slider
@@ -66,8 +48,6 @@ async function createEventPage(event) {
 	//date
 	const date = document.getElementById('date');
 	date.innerHTML = `${event.date}`;
-	
-	sliderBackground();
 
 	//gestion du text
 	const txt = document.getElementById('textEvenement');
