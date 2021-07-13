@@ -968,18 +968,34 @@ footer a {
   width: 100%;
 }
 
-.textEvenement {
-  text-align: center;
-}
-
 .carousel-inner .carousel-item img {
   max-height: 600px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.date {
-  font-size: 0.8rem;
+.event-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.event-container .textEvenement {
+  max-width: 800px;
+}
+
+.event-container .date {
+  font-size: 0.9rem;
   text-align: center;
 }
 
