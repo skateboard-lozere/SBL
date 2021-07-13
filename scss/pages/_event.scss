@@ -9,6 +9,14 @@
 	text-align: center;
 }
 
+.carousel-inner {
+	img {
+		max-height: 600px;
+		width: auto;
+		object-fit: contain;
+	}
+}
+
 .date {
 	font-size: 0.8rem;
 	text-align: center;

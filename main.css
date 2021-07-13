@@ -969,6 +969,13 @@ footer a {
   text-align: center;
 }
 
+.carousel-inner img {
+  max-height: 600px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .date {
   font-size: 0.8rem;
   text-align: center;
