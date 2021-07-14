@@ -61,8 +61,8 @@ async function addDomTeamCard(teamCard) {
 				<div class="card">
 					<div class="card-img" id="card-img${i}"></div>
 					<div class="bloc-content-show">
-						<h2 class="text-light">${teamCard[i].nom}</h2>
 						<h2 class="text-light">${teamCard[i].prenom}</h2>
+						<h2 class="text-light">${teamCard[i].nom}</h2>
 						<p class="text-light text-right">${teamCard[i].title}</p>
 					</div>
 				</div>
@@ -76,8 +76,8 @@ async function addDomTeamCard(teamCard) {
 			<div class="card">
 				<div class="card-img" id="card-img${i}"></div>
 				<div class="bloc-content-show">
-					<h2 class="text-light">${teamCard[i].nom}</h2>
 					<h2 class="text-light">${teamCard[i].prenom}</h2>
+					<h2 class="text-light">${teamCard[i].nom}</h2>
 					<p class="text-light text-right">${teamCard[i].title}</p>
 				</div>
 			</div>

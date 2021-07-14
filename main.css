@@ -971,12 +971,12 @@ footer a {
 
 @media (min-width: 470px) {
   .backgroundBlackEvent {
-    height: 600px;
+    height: 550px;
   }
 }
 
 .carousel-inner .carousel-item img {
-  max-height: 600px;
+  max-height: 550px;
   -o-object-fit: contain;
      object-fit: contain;
 }
