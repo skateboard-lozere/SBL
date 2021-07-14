@@ -84,12 +84,9 @@
 		linear-gradient(0deg, hsl(167, 0%, 6%), hsl(167, 0%, 6%));
 	z-index: -99;
 	width: 100%;
-	height: 410px;
+	height: 0px;
 	@media (min-width: 470px) {
 		height: 600px;
-	}
-	@media (min-width: 360px) {
-		height: 460px;
 	}
 }
 
