@@ -36,7 +36,7 @@ async function addDomEnvent(eventCard) {
 		<img class="card-img-top" src="${eventCard[i].imageCardUrl}"
 			 alt="Card image cap">
 		<div class="card-body">
-		  <div class="card__flexAlign"><h4 class="card-title">${eventCard[i].title}</h4> <span class="card__date">${eventCard[i].date}</span></div>
+		  <div class="card__flexAlign"><h3 class="card-title">${eventCard[i].title}</h3> <span class="card__date">${eventCard[i].date}</span></div>
 		  <p class="card-text">${eventCard[i].description}</p>
 		  <a class="btn btn-dark mt-3"" href="event.html?idEvent=${eventCard[i]._id}">Voir</a>
 		</div>

@@ -77,12 +77,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
-  margin: 15px 0 15px;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin: 15px 0 15px;
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
