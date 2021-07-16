@@ -93,12 +93,17 @@ async function addDomTeamCard(teamCard) {
 	}
 }
 
+function disableLoaderSpinner(params) {
+	const spinner = document.getElementById('loader');
+	spinner.classList.add("disable-loader-spinner");
+}
 
 async function main() {
 	try {
 		//gestion des teamcards
 		dataTeams = await getResquest('https://skateboard-lozere.herokuapp.com/api/teamcard/');
 		await addDomTeamCard(dataTeams);
+		disableLoaderSpinner();
 	} catch (error) {
 		console.error(error);
 	}
@@ -106,6 +111,7 @@ async function main() {
 		//gestion des evenements
 		dataEvents = await getResquest('https://skateboard-lozere.herokuapp.com/api/event/');
 		await addDomEnvent(dataEvents);
+		disableLoaderSpinner();
 	} catch (error) {
 		console.error(error);
 	}
