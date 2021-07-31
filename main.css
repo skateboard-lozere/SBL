@@ -234,7 +234,7 @@ nav {
   top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 888px) {
   nav {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -248,7 +248,7 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 888px) {
   nav a {
     opacity: 1;
   }
@@ -261,7 +261,7 @@ nav a {
   background-color: #000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 888px) {
   .bandeauBurger {
     display: none;
   }
@@ -327,7 +327,7 @@ nav a {
   transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 888px) {
   .nav-checkbox-label {
     display: none;
   }
@@ -407,7 +407,7 @@ nav a {
           transform: scale(1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   .menus ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1068,6 +1068,7 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 1.7rem;
 }
 
 .event-container .textEvenement {
@@ -1130,6 +1131,55 @@ footer a {
 
 .mentions-text h2 {
   font-weight: 500;
+}
+
+.mentions-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mentions-text div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 650px;
+  text-align: center;
+}
+
+.mentions-text h2 {
+  font-weight: 500;
+}
+
+.skate-list-conseil {
+  list-style-type: disc;
+  text-align: start;
+  margin: 15px;
+  padding-bottom: 5px;
+}
+
+.skate-list-conseil li {
+  margin-bottom: 20px;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {

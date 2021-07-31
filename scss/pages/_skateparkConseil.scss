@@ -16,4 +16,12 @@
 	}
 }
 
-//TODO trnasformer ce block en comonent page-de-txt et l'appliquer à skateboard conseil etc...
+.skate-list-conseil {
+	list-style-type: disc;
+	text-align: start;
+	margin: 15px;
+	padding-bottom: 5px;
+	li {
+		margin-bottom: 20px;
+	}
+}
