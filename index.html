@@ -81,14 +81,14 @@
 
 	<h1>Skateboard Brotherhood Lozere</h1>
 
-
 	<!-- BANDEAU INSCRIPTION 2021 - 2022 -->
 	<div class="inscription-bandeau">
 		<span>ECOLE DE SKATEBOARD</span>
 		<span>Saison 2021-2022</span>
 		<span>Pré-inscription jusqu'au 1er septembre 2021</span>
 		<span>Pour se pré-inscrire, envoyer un mail à:</span>
-		<a href="mailto:skateboardbrotherhoodlozere@gmail.com?subject=pre-inscription 2021-2022">skateboardbrotherhoodlozere@gmail.com</a>
+		<a
+			href="mailto:skateboardbrotherhoodlozere@gmail.com?subject=pre-inscription 2021-2022">skateboardbrotherhoodlozere@gmail.com</a>
 	</div>
 
 
@@ -189,7 +189,11 @@
 
 			<h2>Team</h2>
 			<div class="underline-title"></div>
-			<div class="loader" id="loader-team-card">Loading...</div>
+			<!-- Loader Spinner -->
+			<div class="loader-container" id="loader-team-card">
+				<div class="loader">Loading...</div>
+			</div>
+			<!-- Team card from server -->
 			<div id="dynamicTeamCard"></div>
 
 		</section>
@@ -197,7 +201,10 @@
 		<section class="evenement section" id="evenement">
 			<h2>Evenement</h2>
 			<div class="underline-title"></div>
-			<div class="loader" id="loader-event">Loading...</div>
+			<!-- Loader Spinner -->
+			<div class="loader-container"  id="loader-event">
+				<div class="loader">Loading...</div>
+			</div>
 			<div class="container my-4">
 				<!--Carousel Wrapper-->
 				<div id="multi-item-example" class="carousel slide carousel-multi-item" data-interval="false">

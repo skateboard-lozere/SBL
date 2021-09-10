@@ -146,6 +146,10 @@ a:link, a:visited, a:hover, a:focus, a:active {
   color: yellow;
 }
 
+.loader-container {
+  height: 4em;
+}
+
 .loader,
 .loader::before,
 .loader::after {
