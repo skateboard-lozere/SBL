@@ -11,6 +11,7 @@ async function getResquest(url) {
 		throw new Error("une erreur est survenu" + message);
 	}
 }
+
 //FUNCTION qui ajoute les cards events au Dom
 async function addDomEnvent(eventCard) {
 	const carousel = document.getElementById('carousel-inner');
@@ -38,7 +39,7 @@ async function addDomEnvent(eventCard) {
 		<div class="card-body">
 		  <div class="card__flexAlign"><h3 class="card-title">${eventCard[i].title}</h3> <span class="card__date">${eventCard[i].date}</span></div>
 		  <p class="card-text">${eventCard[i].description}</p>
-		  <a class="btn btn-dark mt-3"" href="event.html?idEvent=${eventCard[i]._id}">Voir</a>
+		  <a class="btn btn-dark mt-3" href="event.html?idEvent=${eventCard[i]._id}">Voir</a>
 		</div>
 	  </div>`;
 		row.appendChild(div);
