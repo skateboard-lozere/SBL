@@ -649,7 +649,7 @@ footer .div-separator {
 
 @media (min-width: 768px) {
   footer .div-separator {
-    height: 255px;
+    height: 355px;
     width: 1px;
   }
 }
