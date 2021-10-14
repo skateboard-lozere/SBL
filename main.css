@@ -37,6 +37,10 @@ button {
 }
 
 body {
+  scroll-behavior: smooth !important;
+}
+
+body {
   font-family: 'roboto', sans-serif;
   line-height: 1.5rem;
   font-size: 18px;
@@ -819,7 +823,6 @@ footer a {
   transition: transform ease-out 300ms;
   transition: transform ease-out 300ms, -webkit-transform ease-out 300ms;
 }
- 
 
 .bloc-focus-top, .bloc-focus-bottom {
   position: absolute;
