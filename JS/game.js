@@ -61,7 +61,7 @@ class Obstacle {
             if (skateur.destinationX == this.x || skateur.destinationX == (this.x + 1) || skateur.destinationX == (this.x + 2) || skateur.destinationX == (this.x + 3) || skateur.destinationX == (this.x + 4)) {
                 console.log('OBSTACLE !');
                 console.log('Frame du skateur :', skateur.frame);
-                if (skateur.frame < 5 || skateur.frame >= 12) {
+                if (skateur.frame < 5 || skateur.frame > 12) {
 
                     setTimeout(() => {
                         state.current = state.over;
