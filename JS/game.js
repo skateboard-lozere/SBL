@@ -1,3 +1,4 @@
+
 // SELECT CVS
 const canvas = document.getElementById("myCanvas");
 const context = canvas.getContext("2d");
@@ -5,7 +6,6 @@ const context = canvas.getContext("2d");
 // GAMES VARS AND CONSTS
 let frames = 0;
 let score = 0;
-
 
 // Menu START
 const spriteStart = new Image();
@@ -55,25 +55,20 @@ class Obstacle {
     }
     update() {
         if (state.current == state.game) {
-            this.x = this.x - 3;
-            //quand le skateur touche l'obstacle et qu'il n'a pas une frame de saut
-            if (skateur.destinationX == this.x || skateur.destinationX == (this.x + 1) || skateur.destinationX == (this.x + 2)) {
+            this.x = this.x - 5; //Vitesse du bloc Obstacle soit: n pixel
+            //quand le skateur touche l'obstacle et qu'il n'a pas une frame de saut 
+            // n possibilité car l'obstacle bouje de n pixels à chaque update
+            if (skateur.destinationX == this.x || skateur.destinationX == (this.x + 1) || skateur.destinationX == (this.x + 2) || skateur.destinationX == (this.x + 3) || skateur.destinationX == (this.x + 4)) {
                 console.log('OBSTACLE !');
                 console.log('Frame du skateur :', skateur.frame);
                 if (skateur.frame < 5 || skateur.frame >= 12) {
-                    if (skateur.frame >= 12) {
-                        setTimeout(() => {
-                            state.current = state.over;
-                            alert(`Votre score: ${score}`);
-                            score = 0;
-                        }, 100);
-                    } else {
-                        setTimeout(() => {
-                            state.current = state.over;
-                            alert(`Votre score: ${score}`);
-                            score = 0;
-                        }, 100);
-                    }
+
+                    setTimeout(() => {
+                        state.current = state.over;
+                        alert(`Votre score: ${score}`);
+                        score = 0;
+                    }, 50);
+
                 } else {
                     score += 1;
                     console.log('score is :', score)
@@ -171,7 +166,7 @@ const skateur = {
 
     update: function () {// fait l'animation
         if (this.Ijump == true) {
-            this.period = 6;
+            this.period = 4;// donne la vitesse de saut du skateur
             if (state.current == state.game && frames % this.period == 0) {
                 this.frame += 1;
             }
@@ -211,9 +206,12 @@ function update() {
 
 // LOOP
 function loop() {
+
     update();
     draw();
     frames++;
     requestAnimationFrame(loop);
+
 }
 loop();
+
