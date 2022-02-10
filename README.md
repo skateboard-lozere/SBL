@@ -1,1 +1,0 @@
-Copyright: Antoine Pertoldi
